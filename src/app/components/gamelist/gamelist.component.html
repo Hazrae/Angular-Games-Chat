@@ -1,0 +1,25 @@
+<h3>Liste des jeux</h3>
+
+
+<table class = "table">
+      <thead class="thead-dark">
+            <tr>
+                  <th scope="col">Jaquette</th>
+                  <th scope="col">Titre</th>
+                  <!-- <th scope="col">Type</th> -->
+                  <th scope="col">Détail</th>
+            </tr>
+      </thead>
+
+      <tbody *ngFor="let item of listGame; let i = index">
+            <td class="col">
+                  <img [src]="item.photo" height="42" width="42">
+            </td>
+            <td class="col">
+                  <p class="titre">{{item.title}}</p>
+            </td>        
+            <td class="col">
+                  <a [routerLink]="['../', i]">détails</a>
+            </td>          
+      </tbody>
+</table>

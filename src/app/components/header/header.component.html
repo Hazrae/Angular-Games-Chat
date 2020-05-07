@@ -1,0 +1,29 @@
+<nav class="navbar-default">
+      <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                  <li routerLinkActive="active">
+                        <a routerLink="admin">Admin</a>
+                  </li>
+                  <li routerLinkActive="active">
+                        <a routerLink="game/new">Ajouter un jeu</a>
+                  </li>
+                  <li>
+                        <a routerLink="game/list">Liste des jeux</a>
+                  </li>
+                  <li>
+                        <a routerLink="chat">Chat with the Boyz and Girl</a>
+                  </li>
+            </ul>
+            <ul class=" nav navbar-nav navbar-right">
+                  <li *ngIf="!isAuth">
+                        <a routerLink="signup">Créer un compte</a>
+                  </li>
+                  <li *ngIf="!isAuth">
+                        <a routerLink="signin">Se connecter</a>
+                  </li>
+                  <li *ngIf="isAuth">
+                        <a (click)="onSignOut()">Se déconnecter</a>
+                  </li>
+            </ul>
+      </div>
+</nav>

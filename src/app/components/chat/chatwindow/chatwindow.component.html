@@ -1,0 +1,25 @@
+<h3>Salon de chat</h3>
+
+
+<table class = "table">
+      <thead class="thead-dark">
+            <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Pseudo</th>
+                  <th scope="col">Message</th>                  
+            </tr>
+      </thead>
+
+      <tbody *ngFor="let item of listMessages">
+            <td class="col">
+                  <p>{{item.date}}</p>
+             </td>
+            <td class="col">
+                 <p>{{item.user}}</p>
+            </td>
+            <td class="col">
+                  <p>{{item.message}}</p>
+            </td>        
+                   
+      </tbody>
+</table>

@@ -1,0 +1,29 @@
+<div class="container">
+
+      <!-- Portfolio Item Heading -->     
+      <h1 class="my-4">Detail de votre sélection
+      </h1>
+      <a routerLink="../list" class="btn btn-info">Retour</a>
+    
+      <!-- Portfolio Item Row -->
+      <div class="row">
+    
+        <div class="col-md-8">
+          <img class="img-fluid" [src]="game.photo">
+        </div>    
+  
+
+        <div class="col-md-4">
+          <h3 class="my-3">Titre du jeu</h3>
+          <p>{{game.title}}</p>
+          <h3 class="my-3">Infos</h3>
+          <ul>
+            <li>{{game.type}}</li>
+            <li>{{game.note}}</li>           
+          </ul>
+        </div>
+    
+      </div>
+     
+
+    
